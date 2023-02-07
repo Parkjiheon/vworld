@@ -8,6 +8,24 @@
 </head>
 <script type="text/javascript" src="http://map.vworld.kr/js/vworldMapInit.js.do?version=2.0&apiKey=B670B17B-DAFA-3FDD-A25E-4E7E1BE34C3A"></script>
 <body>
-    하ㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣ
+    <div id="vmap" style="width:100%; height:600px; left:0px; top:0;"></div>
+    <script type="text/javascript">
+        let mapOptions = new vw.MapOptions(
+            vw.BasemapType.GRAPHIC,
+            "",
+            vw.DensityType.FULL,
+            vw.DensityType.BASIC,
+            false,
+            new vm.CameraPosition(
+                new vw.CoordZ(126.92775802528264, 37.52501881993892, 124),
+                new vw.Direction(0, -90, 0)
+            ),
+            new vw.CameraPosition(
+                new vw.CoordZ(126.92775802528264, 37.52501881993892, 12416),
+                new vw.Direction(0,-90,0)
+            )
+        );
+        let map = new vw.Map("vmap", mapOptions);
+    </script>
 </body>
 </html>
